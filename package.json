@@ -1,1 +1,70 @@
-
+{
+  "name": "stylet",
+  "version": "2.0.0",
+  "description": "A modern, animation-first CSS framework. Dynamic, powerful, zero-config.",
+  "keywords": [
+    "css",
+    "css-framework",
+    "animation",
+    "responsive",
+    "design-system",
+    "modern-css",
+    "oklch",
+    "design-tokens",
+    "utility-classes",
+    "component-library",
+    "open-source"
+  ],
+  "license": "MIT",
+  "author": "Nnamchi Israel <hello@phaxadstudios.com>",
+  "homepage": "https://stylet.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phaxadstudios/stylet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/phaxadstudios/stylet/issues"
+  },
+  "funding": [
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/stylet"
+    },
+    {
+      "type": "patreon",
+      "url": "https://patreon.com/phaxadstudios"
+    }
+  ],
+  "main": "dist/stylet.css",
+  "style": "dist/stylet.css",
+  "exports": {
+    ".": "./dist/stylet.css",
+    "./tokens": "./dist/stylet.tokens.css",
+    "./reset": "./dist/stylet.reset.css",
+    "./components": "./dist/stylet.components.css",
+    "./utilities": "./dist/stylet.utilities.css",
+    "./animations": "./dist/stylet.animations.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "scripts": {
+    "build": "node scripts/build.js",
+    "lint": "echo 'Linting handled by CI'",
+    "test": "npm run lint"
+  },
+  "devDependencies": {
+    "lightningcss": "^1.24.0",
+    "postcss-import": "^16.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
