@@ -7,7 +7,7 @@
 ---
 name: ✨ Feature request
 about: Suggest an idea for Stylet
-title: '[Feature]: '
+title: '[Feature]: ' 
 labels: enhancement
 assignees: ''
 ---
