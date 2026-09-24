@@ -1,1 +1,49 @@
+name: Build CSS
 
+on:
+  push:
+    branches:
+      - main
+      - v2
+    paths:
+      - 'src/**'
+      - 'scripts/**'
+      - 'package.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Build CSS
+        run: node scripts/build.js
+
+      - name: Show built files
+        run: ls -lh dist/
+
+      - name: Commit dist/ changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dist/
+          if git diff --staged --quiet; then
+            echo "No changes to dist/"
+          else
+            git commit -m "build: regenerate dist/ [skip ci]"
+            git push
+          fi
