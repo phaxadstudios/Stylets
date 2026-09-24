@@ -1,1 +1,17 @@
+# Source (users get built dist/ instead)
+src/
+scripts/
+docs/
+examples/
+tests/
 
+# Dev config
+.github/
+.editorconfig
+.prettierrc
+.gitignore
+vite.config.js
+*.config.js
+
+# But always keep dist/
+!dist/
