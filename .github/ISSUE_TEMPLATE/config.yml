@@ -1,1 +1,17 @@
 
+---
+
+### 📄 `.github/ISSUE_TEMPLATE/config.yml`
+
+```yaml
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Questions & discussions
+    url: https://github.com/phaxadstudios/stylet/discussions
+    about: Ask questions, share ideas, and get help from the community
+  - name: 📖 Documentation
+    url: https://stylet.vercel.app
+    about: Read the docs before opening an issue
+  - name: 🔒 Report a security issue
+    url: https://github.com/phaxadstudios/stylet/security/advisories/new
+    about: Privately report a security vulnerability
